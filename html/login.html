@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            background-color: #322635;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -17,14 +17,18 @@
         }
 
         .login-container {
-            background-color: white;
+            background-color: #333;
             padding: 20px 40px;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: #f4f4f9;
+
         }
 
         .login-container h2 {
             margin-bottom: 20px;
+            color: #f4f4f9;
+
         }
 
         .login-container input[type="text"],
@@ -34,12 +38,21 @@
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
+            outline: none;
+
+
+        }
+        /* Focus state styling for input boxes */
+        .login-container input[type="text"]:focus,
+        .login-container input[type="password"]:focus {
+            border-color: #cc00ffa4; /* Change the border color on focus */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a blue shadow on focus */
         }
 
         .login-container button {
             width: 100%;
             padding: 10px;
-            background-color: #007BFF;
+            background-color: #cc00ffa4;
             color: white;
             border: none;
             border-radius: 4px;
@@ -47,7 +60,7 @@
         }
 
         .login-container button:hover {
-            background-color: #0056b3;
+            background-color: #cc00ff;
         }
     </style>
 </head>
