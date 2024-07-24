@@ -4,43 +4,193 @@ h1,
 h2,
 p,
 ul,
-li {
+li,
+header,
+nav{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: pixel;
+    
 }
 a {
     color: #cc00ffa4;
 }
+
+@font-face {
+    font-family: "pixel";
+    src: url(slkscr.ttf) format("truetype");
+}
+/* Header banner styling */
+.header-banner {
+    background-color: rgba(50, 38, 53, 0);
+    color: #cc00ffa4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    padding: 10px 3cqw;
+    width: 100%;
+    top: 0;
+    left: 0;
+    
+    
+}
+
+.header-banner .logo img {
+    background-color: rgba(0, 0, 0, 0.0);
+    height: 74px;
+    object-position: 0px 0px;
+    
+}
+
+.header-banner .nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.header-banner .nav-menu ul li {  
+    margin-left: 20px;
+}
+
+.header-banner .nav-menu ul li a {
+    color: #1b0520a4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.header-banner .nav-menu ul li a:hover {
+    text-decoration: underline;
+}
 /* Body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #322635;
+    background-color: #000000;
     color: #f4f4f9;
     line-height: 1.6;
     padding: 20px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     
+    
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+.wrapper .svg-wrapper{
+    font-family: "Pixel", sans-serif;
+    align-items:center;
+    position: relative;
+    left: -100px;
+    width: 100%;
+    height: 100%;
+    padding: 200px 13cqw;
+    z-index: -1;
+}
+
+.wrapper .svg-wrapper text {
+    animation: stroke 3s;
+    animation-iteration-count: 1;
+    stroke-width: 1;
+    stroke: #cc00ff;
+    animation-fill-mode: forwards;
+    font-size: 100px;
+}
+
+@keyframes stroke {
+    0% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgba(130, 158, 249, 1);
+        stroke-dashoffset: 25%;
+        stroke-dasharray: 0 50%;
+        stroke-width: 2;
+    }
+
+    70% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgba(133, 5, 165, 1);
+    }
+
+    80% {
+        fill: rgba(72, 138, 204, 0);
+        stroke: rgba(204,0,255, 1);
+        stroke-width: 3;
+    }
+
+    100% {
+        fill: rgba(204, 0, 255, 1);
+        stroke: rgba(54, 95, 160, 0) 3px;
+        stroke-dashoffset: -25%;
+        stroke-dasharray: 50% 0;
+        stroke-width: 0;
+        
+    }
+}
+
+
+.bottom-wave {
+    position: fixed;
+    /* Change from absolute to fixed */
+    bottom: 0;
+    /* Position it at the bottom */
+    left: 0;
+    /* Align to the left */
+    z-index: -1;
+    /* Keep it behind other content */
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Maintain aspect ratio */
+    box-sizing: border-box;
+    display: block;
+    background-color: #cc00ff00;
+    background-image: linear-gradient(to bottom, rgba(204, 0, 255, 0), #cc00ff00);
+}
+.top-wave {
+    position: fixed;
+    /* Change from absolute to fixed */
+    top: 0;
+    /* Position it at the bottom */
+    left: 0;
+    /* Align to the left */
+    z-index: -1;
+    /* Keep it behind other content */
+    width: 100%;
+    /* Full width */
+    height: auto;
+    /* Maintain aspect ratio */
+    box-sizing: border-box;
+    display: block;
+    background-color: #cc00ff00;
+    transform: rotate(180deg);
+    align-items: ;
+    background-image: linear-gradient(to bottom, rgba(204, 0, 255, 0), #cc00ff00);
 }
 
 /* Container styling */
-.container {
-    background-color: #333;
-    padding: 20px 40px;
+.container-about {
+    background-color: rgba(90, 78, 94, .8);
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 10px 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
     max-width: 600px;
     width: 100%;
+    z-index: 1;
 }
 
 /* Headings styling */
+
 h1,
 h2 {
     color: #cc00ffa4;
+    -webkit-text-fill-color: #cc00ff;
+    -webkit-text-stroke: 0.5px rgb(143, 56, 128);
     margin-bottom: 20px;
 }
 
@@ -62,4 +212,31 @@ hr {
     height: 1px;
     background: #cc00ffa4;
     margin-bottom: 20px;
+    opacity: 1;
+}
+
+.container-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    
+    gap: 10px;
+    padding: 10px;
+    margin-top: 100px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    max-width: 500px;
+    width: 100%;
+    z-index: 1;
+}
+
+
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: whitesmoke;
 }
