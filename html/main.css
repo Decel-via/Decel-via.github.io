@@ -97,7 +97,7 @@ body {
     stroke-width: 1;
     stroke: #cc00ff;
     animation-fill-mode: forwards;
-    font-size: 100px;
+    font-size: 100px
 }
 
 @keyframes stroke {
